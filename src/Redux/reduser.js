@@ -19,7 +19,7 @@ const REG_OK_SHOW = "REG-OK-SHOW";
 const ALL_CLOSE = "ALL-CLOSE";
 const MAIL_OK_SHOW = "MAIL-OK-SHOW";
 const PUSH_OK_SHOW = "PUSH-OK-SHOW";
-const SPEC_TABLE_EDIT = "SPEC-TABLE-EDIT"
+const SPEC_TABLE_EDIT = "SPEC-TABLE-EDIT";
 
 let initialState = storeCopy.getState();
 
@@ -63,7 +63,6 @@ const reduser = (state = initialState, action) => {
     };
     switch (form) {
       case "rec":
-        
         if (
           state.rectangle.newValuesRec[0].newValueSel1 !== "" &&
           state.rectangle.newValuesRec[0].newValueSel2 !== "" &&
@@ -156,7 +155,7 @@ const reduser = (state = initialState, action) => {
             ...state.rectangle.newValuesRec[0],
             cost: stateCopy.rectangle.newArray.cost,
           };
-        }else{
+        } else {
           stateCopy.rectangle.newValuesRec[0].cost = "";
         }
 
@@ -319,7 +318,7 @@ const reduser = (state = initialState, action) => {
           };
           stateCopy.triangle.newValuesTri[0].cost =
             stateCopy.triangle.newArray.cost;
-        }else{
+        } else {
           stateCopy.triangle.newValuesTri[0].cost = "";
         }
 
@@ -417,7 +416,7 @@ const reduser = (state = initialState, action) => {
           };
           stateCopy.circle.newValuesCir[0].cost =
             stateCopy.circle.newArray.cost;
-        }else{
+        } else {
           stateCopy.circle.newValuesCir[0].cost = "";
         }
         return stateCopy;
@@ -528,7 +527,7 @@ const reduser = (state = initialState, action) => {
           };
           stateCopy.washer.newValuesWas[0].cost =
             stateCopy.washer.newArray.cost;
-        }else{
+        } else {
           stateCopy.washer.newValuesWas[0].cost = "";
         }
         return stateCopy;
@@ -554,7 +553,7 @@ const reduser = (state = initialState, action) => {
           state.sector.newValuesSec[0].newValueInp4 !== "" &&
           state.errorSecInput.input1 === false &&
           state.errorSecInput.input2 === false &&
-          state.errorSecInput.input3 === false 
+          state.errorSecInput.input3 === false
         ) {
           stateCopy.sector.newArray.type = { ...state.sector.newArray.type };
           stateCopy.sector.newArray.type = form;
@@ -648,7 +647,7 @@ const reduser = (state = initialState, action) => {
           };
           stateCopy.sector.newValuesSec[0].cost =
             stateCopy.sector.newArray.cost;
-        }else{
+        } else {
           stateCopy.sector.newValuesSec[0].cost = "";
         }
         return stateCopy;
@@ -1197,15 +1196,15 @@ const reduser = (state = initialState, action) => {
                   }
 
                   // if (stateCopy.washer.newValuesWas[0].newValueSel2 !== "") {
-                    if (
-                      stateCopy.washer.newValuesWas[0].newValueInp1 <
-                      (Number(state.washer.newValuesWas[0].newValueInp2) +
-                        Number(state.washer.newValuesWas[0].newValueSel2))
-                    ) {
-                      stateCopy.errorWasInput.input2 = true;
-                    } else {
-                      stateCopy.errorWasInput.input2 = false;
-                    }
+                  if (
+                    stateCopy.washer.newValuesWas[0].newValueInp1 <
+                    Number(state.washer.newValuesWas[0].newValueInp2) +
+                      Number(state.washer.newValuesWas[0].newValueSel2)
+                  ) {
+                    stateCopy.errorWasInput.input2 = true;
+                  } else {
+                    stateCopy.errorWasInput.input2 = false;
+                  }
                   // }
                 }
 
@@ -1251,7 +1250,7 @@ const reduser = (state = initialState, action) => {
             }
           };
           let addNewTextSec = (text, num, form) => {
-            debugger
+            debugger;
             switch (num) {
               case "sel1":
                 stateCopy.sector.newValuesSec = [...state.sector.newValuesSec];
@@ -1299,12 +1298,14 @@ const reduser = (state = initialState, action) => {
                   if (
                     stateCopy.sector.newValuesSec[0].newValueInp1 !== "" &&
                     stateCopy.sector.newValuesSec[0].newValueInp2 !== "" &&
-                    stateCopy.sector.newValuesSec[0].newValueInp3 > action.param.alphamin &&
-                    stateCopy.sector.newValuesSec[0].newValueInp3 < action.param.alphamax
+                    stateCopy.sector.newValuesSec[0].newValueInp3 >
+                      action.param.alphamin &&
+                    stateCopy.sector.newValuesSec[0].newValueInp3 <
+                      action.param.alphamax
                   ) {
                     let d =
                       Number(stateCopy.sector.newValuesSec[0].newValueInp1) +
-                      (2 * stateCopy.sector.newValuesSec[0].newValueInp2)
+                      2 * stateCopy.sector.newValuesSec[0].newValueInp2;
                     if (
                       horda(
                         d,
@@ -1316,7 +1317,6 @@ const reduser = (state = initialState, action) => {
                       stateCopy.errorSecInput.input3 = false;
                     }
                   }
-                  
                 }
 
                 return stateCopy;
@@ -1343,12 +1343,14 @@ const reduser = (state = initialState, action) => {
                   if (
                     stateCopy.sector.newValuesSec[0].newValueInp1 !== "" &&
                     stateCopy.sector.newValuesSec[0].newValueInp2 !== "" &&
-                    stateCopy.sector.newValuesSec[0].newValueInp3 > action.param.alphamin &&
-                    stateCopy.sector.newValuesSec[0].newValueInp3 < action.param.alphamax
+                    stateCopy.sector.newValuesSec[0].newValueInp3 >
+                      action.param.alphamin &&
+                    stateCopy.sector.newValuesSec[0].newValueInp3 <
+                      action.param.alphamax
                   ) {
                     let d =
                       Number(stateCopy.sector.newValuesSec[0].newValueInp1) +
-                      (2 * stateCopy.sector.newValuesSec[0].newValueInp2)
+                      2 * stateCopy.sector.newValuesSec[0].newValueInp2;
                     if (
                       horda(
                         d,
@@ -1386,12 +1388,14 @@ const reduser = (state = initialState, action) => {
                   if (
                     stateCopy.sector.newValuesSec[0].newValueInp1 !== "" &&
                     stateCopy.sector.newValuesSec[0].newValueInp2 !== "" &&
-                    stateCopy.sector.newValuesSec[0].newValueInp3 > action.param.alphamin &&
-                    stateCopy.sector.newValuesSec[0].newValueInp3 < (action.param.alphamax +1)
+                    stateCopy.sector.newValuesSec[0].newValueInp3 >
+                      action.param.alphamin &&
+                    stateCopy.sector.newValuesSec[0].newValueInp3 <
+                      action.param.alphamax + 1
                   ) {
                     let d =
                       Number(stateCopy.sector.newValuesSec[0].newValueInp1) +
-                      (2 * stateCopy.sector.newValuesSec[0].newValueInp2)
+                      2 * stateCopy.sector.newValuesSec[0].newValueInp2;
                     if (
                       horda(
                         d,
@@ -1512,9 +1516,8 @@ const reduser = (state = initialState, action) => {
           state.errorRecInput.input1 === false &&
           state.errorRecInput.input2 === false
         ) {
-          stateCopy.rectangle.newArray.id = { ...state.rectangle.newArray.id};
-          stateCopy.rectangle.newArray.id =state.SpecArray.length
-
+          stateCopy.rectangle.newArray.id = { ...state.rectangle.newArray.id };
+          stateCopy.rectangle.newArray.id = state.SpecArray.length;
 
           let obj = Object.assign({}, stateCopy.rectangle.newArray);
           stateCopy.SpecArray.push(obj);
@@ -1544,7 +1547,7 @@ const reduser = (state = initialState, action) => {
           state.errorTriInput.input3 === false
         ) {
           stateCopy.triangle.newArray.id = { ...state.triangle.newArray.id };
-          stateCopy.triangle.newArray.id =state.SpecArray.length
+          stateCopy.triangle.newArray.id = state.SpecArray.length;
 
           let obj = Object.assign({}, stateCopy.triangle.newArray);
           stateCopy.SpecArray.push(obj);
@@ -1573,7 +1576,7 @@ const reduser = (state = initialState, action) => {
           state.errorCirInput.input1 === false
         ) {
           stateCopy.circle.newArray.id = { ...state.circle.newArray.id };
-          stateCopy.circle.newArray.id =state.SpecArray.length
+          stateCopy.circle.newArray.id = state.SpecArray.length;
 
           let obj = Object.assign({}, stateCopy.circle.newArray);
           stateCopy.SpecArray.push(obj);
@@ -1603,7 +1606,7 @@ const reduser = (state = initialState, action) => {
           state.errorWasInput.input2 === false
         ) {
           stateCopy.washer.newArray.id = { ...state.washer.newArray.id };
-          stateCopy.washer.newArray.id =state.SpecArray.length
+          stateCopy.washer.newArray.id = state.SpecArray.length;
 
           let obj = Object.assign({}, stateCopy.washer.newArray);
           stateCopy.SpecArray.push(obj);
@@ -1631,10 +1634,10 @@ const reduser = (state = initialState, action) => {
           state.sector.newValuesSec[0].newValueInp3 !== "" &&
           state.errorSecInput.input1 === false &&
           state.errorSecInput.input2 === false &&
-          state.errorSecInput.input3 === false 
+          state.errorSecInput.input3 === false
         ) {
           stateCopy.sector.newArray.id = { ...state.sector.newArray.id };
-          stateCopy.sector.newArray.id =state.SpecArray.length
+          stateCopy.sector.newArray.id = state.SpecArray.length;
 
           let obj = Object.assign({}, stateCopy.sector.newArray);
           stateCopy.SpecArray.push(obj);
@@ -1658,17 +1661,32 @@ const reduser = (state = initialState, action) => {
       }
       break;
     case API_STATE:
-      stateCopy = { ...state, ...action.apiState };
-      
+     
+      console.log(action.apiState);
+      let BD = [];
+      for (let i = 0; i < action.apiState.length; i++) {
+        let arrBD = [
+          action.apiState[i].steel,
+          {
+            s: action.apiState[i].thickness,
+            steelcost: action.apiState[i].cost,
+            cutcost: action.apiState[i].costcut,
+          },
+          JSON.parse(action.apiState[i].param),
+        ];
+        BD.push(arrBD);
+      }
+      console.log(BD)
+      stateCopy.data.costBD = BD
       if (action.arr) {
         stateCopy = { ...stateCopy, SpecArray: action.arr };
       }
       let result1 = [];
       let result = [];
-      for (let str of stateCopy.data.costBD){
-        if (!result1.includes(str[0])){
-          result1.push(str[0])
-          result.push({steel:str[0]})
+      for (let str of stateCopy.data.costBD) {
+        if (!result1.includes(str[0])) {
+          result1.push(str[0]);
+          result.push({ steel: str[0] });
         }
       }
       stateCopy.data.steels = result;
@@ -1815,8 +1833,12 @@ const reduser = (state = initialState, action) => {
       };
       return stateCopy;
     case SPEC_TABLE_EDIT:
-      stateCopy.SpecArray = [...state.SpecArray.filter(function(row){return row.id !== action.id;})]
-      for(let i =1 ;i <stateCopy.SpecArray.length; i++){
+      stateCopy.SpecArray = [
+        ...state.SpecArray.filter(function (row) {
+          return row.id !== action.id;
+        }),
+      ];
+      for (let i = 1; i < stateCopy.SpecArray.length; i++) {
         stateCopy.SpecArray[i].id = i;
       }
       localStorage.setItem("array", JSON.stringify(stateCopy.SpecArray));
@@ -1941,12 +1963,12 @@ export const pushOkshowCreator = () => {
   };
 };
 
-export const specTableEditCreator = (id) =>{
+export const specTableEditCreator = (id) => {
   return {
     type: SPEC_TABLE_EDIT,
-    id:id
-  }
-}
+    id: id,
+  };
+};
 
 export const getStateAPIThunkCreator = (length) => {
   return (dispatch) => {
