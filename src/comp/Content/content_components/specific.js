@@ -5,8 +5,8 @@ import TableEdit from "./tableEdit";
 
 const Specification = (props) => {
 
-  let sumcost = props.arrayData.map((sc) => sc.summ);
-  let summas = props.arrayData.map((sm) => sm.summ_m);
+  let sumcost = props.arrayData.map((sc) => sc.cost * sc.Q);
+  let summas = props.arrayData.map((sm) => sm.m * sm.Q);
   let Sc = 0;
   let Sm = 0;
   for (let i = 1; i < sumcost.length; i++) {
@@ -24,9 +24,9 @@ const Specification = (props) => {
       <td>{sp.name}</td>
       <td> {sp.Q} </td>
       <td> {sp.m} </td>
-      <td> {sp.summ_m} </td>
+      {sp.id == "№п." ? (<td> {sp.summ_m} </td>) : (<td> {(sp.m*sp.Q).toFixed(2)} </td>)}
       <td> {sp.cost} </td>
-      <td> {sp.summ} </td>
+      {sp.id == "№п." ?  (<td> {sp.summ} </td>) : (<td> {(sp.cost*sp.Q).toFixed(2)} </td>)  }
       {sp.id !== "№п." ? (
         <td>
           <TableEdit tableEdit = {props.tableEdit} id = {sp.id} />
