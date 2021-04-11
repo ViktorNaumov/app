@@ -770,7 +770,7 @@ let store_copy = {
         id: 0,
         steel: 0,
         param: {
-          D:0
+          
         },
         s: 0,
         Q: 0,
@@ -805,8 +805,7 @@ let store_copy = {
         id: 0,
         steel: 0,
         param: {
-          D: 0,
-          d: 0,
+          
         },
         s: 0,
         Q: 0,
@@ -843,9 +842,7 @@ let store_copy = {
         id: 0,
         steel: 0,
         param: {
-          D: 0,
-          h: 0,
-          alpha: 0,
+          
         },
         s: 0,
         Q: 0,
