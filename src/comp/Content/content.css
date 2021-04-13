@@ -117,7 +117,7 @@
   width: 500px;
   display: block;
   margin-left: 80px;
-  margin-top: 120px;
+  margin-top: 40px;
 }
 
 .result p {
@@ -613,7 +613,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 600px;
   }
   .Flex {
     flex-direction: column;
@@ -624,9 +624,17 @@ body {
     /* padding: 0px; */
   }
 
-
+html {
+  max-width: 600px;
+}
   
   .conteiner1 {
-    width: 100%;
+    width: 600px;
   }
+
+  .login{
+    display: none;
+  }
+
+
 }
