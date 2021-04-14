@@ -614,12 +614,14 @@ body {
     justify-content: center;
     align-items: center;
     width: 600px;
+    height: 1100px;
   }
   .Flex {
     flex-direction: column;
+    width: 600px;
   }
   .namefield {
-    width: 100%;
+    width: 600px;
     margin-left: 0px;
     /* padding: 0px; */
   }
@@ -628,7 +630,8 @@ html {
   max-width: 600px;
 }
   
-  .conteiner1 {
+
+  .conteiner2{
     width: 600px;
   }
 

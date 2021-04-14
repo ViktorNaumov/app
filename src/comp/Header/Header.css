@@ -21,6 +21,14 @@
 		align-items: flex-start; 
 	}	
 }
+/* @media screen and (min-width:1051px){
+	.menu, .icon1, .icon2, .icon3, .icon4, .icon5, .basket_content{
+		box-shadow: 10px -5px 5px 5px rgba(0, 0, 0, .2);
+	}
+	.basket{
+		box-shadow: 10px -5px 5px 5px rgba(0, 0, 0, .2);
+	}
+} */
 
 
 /*************************************ИКОНКИ*********************************************************************************/
@@ -184,22 +192,5 @@ div.basket_content p.bas_c{
 	border:rgb(43,43,43) 1px solid;
 }
 
-@media screen and (max-width: 1050px){
-	/* .login {
-		width: 0px;
-		visibility:collapse; 
-	} */
 
-	.conteiner1 {
-		width: 100%;
-	  }
-	  /* .auth {
-		margin-left: 0px;
-		visibility:hidden;
-	  }  
-	  .a1 {
-		  width: 0px;
-		visibility:collapse;  
-	  } */
-}
 
