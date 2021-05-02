@@ -3,7 +3,7 @@ import Navbar1 from "../IMG/navbar.svg"
 
 const Navbar=()=>{
 	return(
-		<div class="menu">
+		<div className="menu">
 			<img src={Navbar1} alt="navbar" width="38" height="38"/ >
 		</div>
 		);

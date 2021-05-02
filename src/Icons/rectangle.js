@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom"
 
 const Rectangle=()=>{
 	return(
-		<div class="icon1">
+		<div className="icon1">
 			<NavLink to="/rectangle"><img src={Rectangle1} alt="rectangle" width="30" height="30"/></NavLink>
 		</div>
 		);

@@ -10,7 +10,7 @@ const Select1 = (props) => {
     props.onInputValueChenge(text, num, form);
   };
 
-  let opt = props.thickness.map((option) => <option>{option.s}</option>);
+  let opt = props.thickness.map((option,index) => <option key={index}>{option.s}</option>);
 
   return (
     <div>

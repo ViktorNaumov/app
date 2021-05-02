@@ -15,7 +15,7 @@ const RegistrationForm = (props) => {
   return (
     <div>
       <div className="out" onClick={f}>
-        <div><img src={out} width="20" height="20"  ></img></div>
+        <div><img src={out} alt="out" width="20" height="20"  ></img></div>
       </div>
       <form onSubmit={props.handleSubmit}>
         <div>

@@ -11,7 +11,7 @@ const Select = (props) => {
     props.onInputValueChenge(text, num, form);
   };
 
-  let opt = props.steels.map((option) => <option>{option.steel}</option>);
+  let opt = props.steels.map((option,index) => <option key={index}>{option.steel}</option>);
   return (
     <div>
       <p>{props.name}</p>

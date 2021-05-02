@@ -18,7 +18,8 @@ const Specification = (props) => {
   }
   Sm = Sm.toFixed(2);
 
-  let spec = props.arrayData.map((sp) => (
+  let spec = props.arrayData.map((sp,index) => (
+    <tbody key={index}>
     <tr key={sp.id}>
       <td> {sp.id} </td>
       <td>{sp.name}</td>
@@ -35,6 +36,7 @@ const Specification = (props) => {
         <td>Удалить</td>
       )}
     </tr>
+    </tbody>
   ));
 
   return (

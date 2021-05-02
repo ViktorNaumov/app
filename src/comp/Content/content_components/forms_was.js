@@ -1,5 +1,5 @@
 import React from "react";
-import Distant_div from "./distant_div.js";
+import DistantDiv from "./distant_div.js";
 import Select from "./select.js";
 import Select1 from "./select1.js";
 import Input from "./input.js";
@@ -58,7 +58,7 @@ const Forms_was = (props) => {
         param={props.placeholder.param}
         onInputValueChenge={props.onInputValueChenge}
       />
-      <Distant_div />
+      <DistantDiv />
       <div className="input">
         <Button
           name={props.titles[14].title}

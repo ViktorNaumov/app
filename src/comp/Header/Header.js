@@ -13,7 +13,7 @@ import Basket_content from "../../Icons/basket_content.js";
 const Header = (props) => {
  
   return (
-    <div class="conteiner1">
+    <div className="conteiner1">
       <Navbar />
       <Rectangle />
       <Triangle />

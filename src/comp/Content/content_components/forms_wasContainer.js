@@ -8,7 +8,6 @@ import {
 import Forms_was from "./forms_was.js";
 
 let mapStateToProps = (state) => {
-  debugger;
   return {
     titles: state.app.data.titles,
     steels: state.app.data.steels,

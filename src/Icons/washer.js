@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom"
 
 const Washer=()=>{
 	return(
-		<div class="icon4">
+		<div className="icon4">
 			<NavLink to="/washer"><img src={Washer1} alt="washer" width="38" height="38"/> </NavLink>
 		</div>
 		);

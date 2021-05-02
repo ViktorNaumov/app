@@ -102,13 +102,6 @@ const reduser = (state = initialState, action) => {
                 0.0000078
               ).toFixed(2)
             ),
-            // S: Number(
-            //   (
-            //     stateCopy.rectangle.newArray.param.A *
-            //     stateCopy.rectangle.newArray.param.B *
-            //     0.000001
-            //   ).toFixed(2)
-            // ),
             P: Number(
               (
                 stateCopy.rectangle.newArray.param.A * 2 +
@@ -116,19 +109,6 @@ const reduser = (state = initialState, action) => {
               ).toFixed(2)
             ),
           };
-          // stateCopy.rectangle.newArray = {
-          //   ...stateCopy.rectangle.newArray,
-          //   summ_m: Number(
-          //     (
-          //       stateCopy.rectangle.newArray.m * stateCopy.rectangle.newArray.Q
-          //     ).toFixed(2)
-          //   ),
-          //   summ_S: Number(
-          //     (
-          //       stateCopy.rectangle.newArray.S * stateCopy.rectangle.newArray.Q
-          //     ).toFixed(2)
-          //   ),
-          // };
 
           let res = _cutcost(
             state.rectangle.newArray.steel,
@@ -146,9 +126,6 @@ const reduser = (state = initialState, action) => {
                 stateCopy.rectangle.newArray.P * 0.001 * res) *
               1.2
             ).toFixed(2),
-            // summ: (
-            //   stateCopy.rectangle.newArray.cost * stateCopy.rectangle.newArray.Q
-            // ).toFixed(2),
           };
 
           stateCopy.rectangle.newValuesRec[0] = {
@@ -245,15 +222,6 @@ const reduser = (state = initialState, action) => {
             state.triangle.newValuesTri[0].newValueInp4
           );
           stateCopy.triangle.newArray.S = { ...state.triangle.newArray.S };
-          // stateCopy.triangle.newArray.S = Number(
-          //   (
-          //     Stri(
-          //       stateCopy.triangle.newArray.param.A,
-          //       stateCopy.triangle.newArray.param.B,
-          //       stateCopy.triangle.newArray.param.alpha
-          //     ) * 0.000001
-          //   ).toFixed(2)
-          // );
           stateCopy.triangle.newArray.m = { ...state.triangle.newArray.m };
           stateCopy.triangle.newArray.m = M(
             stateCopy.triangle.newArray.param.A,
@@ -271,22 +239,6 @@ const reduser = (state = initialState, action) => {
               stateCopy.triangle.newArray.param.B,
               stateCopy.triangle.newArray.param.alpha
             );
-          // stateCopy.triangle.newArray.summ_m = {
-          //   ...state.triangle.newArray.summ_m,
-          // };
-          // stateCopy.triangle.newArray.summ_m = Number(
-          //   (
-          //     stateCopy.triangle.newArray.m * stateCopy.triangle.newArray.Q
-          //   ).toFixed(2)
-          // );
-          // stateCopy.triangle.newArray.summ_S = {
-          //   ...state.triangle.newArray.summ_S,
-          // };
-          // stateCopy.triangle.newArray.summ_S = Number(
-          //   (
-          //     stateCopy.triangle.newArray.S * stateCopy.triangle.newArray.Q
-          //   ).toFixed(2)
-          // );
           let res = _cutcost(
             stateCopy.triangle.newArray.steel,
             stateCopy.triangle.newArray.s
@@ -305,13 +257,6 @@ const reduser = (state = initialState, action) => {
               1.2
             ).toFixed(2);
 
-          // stateCopy.triangle.newArray.summ = {
-          //   ...state.triangle.newArray.summ,
-          // };
-          // stateCopy.triangle.newArray.summ =
-          //   (
-          //     stateCopy.triangle.newArray.cost * stateCopy.triangle.newArray.Q
-          //   ).toFixed(2) * 1;
 
           stateCopy.triangle.newValuesTri[0].cost = {
             ...state.triangle.newValuesTri[0].cost,
@@ -357,12 +302,6 @@ const reduser = (state = initialState, action) => {
           stateCopy.circle.newArray.Q = Number(
             state.circle.newValuesCir[0].newValueInp2
           );
-          // stateCopy.circle.newArray.S = { ...state.circle.newArray.S };
-          // stateCopy.circle.newArray.S = Number(
-          //   (
-          //     Math.PI * Math.pow(stateCopy.circle.newArray.param.D / 2, 2)
-          //   ).toFixed(2)
-          // );
           state.circle.newArray.m = { ...state.circle.newArray.m };
           stateCopy.circle.newArray.m = Number(
             (
@@ -375,22 +314,6 @@ const reduser = (state = initialState, action) => {
           stateCopy.circle.newArray.P = Number(
             (Math.PI * stateCopy.circle.newArray.param.D).toFixed(2)
           );
-          // stateCopy.circle.newArray.summ_m = {
-          //   ...state.circle.newArray.summ_m,
-          // };
-          // stateCopy.circle.newArray.summ_m = Number(
-          //   (stateCopy.circle.newArray.m * stateCopy.circle.newArray.Q).toFixed(
-          //     2
-          //   )
-          // );
-          // stateCopy.circle.newArray.summ_S = {
-          //   ...state.circle.newArray.summ_S,
-          // };
-          // stateCopy.circle.newArray.summ_S = Number(
-          //   (stateCopy.circle.newArray.S * stateCopy.circle.newArray.Q).toFixed(
-          //     2
-          //   )
-          // );
           let res = _cutcost(
             stateCopy.circle.newArray.steel,
             stateCopy.circle.newArray.s
@@ -405,11 +328,6 @@ const reduser = (state = initialState, action) => {
               stateCopy.circle.newArray.P * 0.001 * res) *
             1.2
           ).toFixed(2);
-
-          // stateCopy.circle.newArray.summ = { ...state.circle.newArray.summ };
-          // stateCopy.circle.newArray.summ = (
-          //   stateCopy.circle.newArray.cost * stateCopy.circle.newArray.Q
-          // ).toFixed(2);
 
           stateCopy.circle.newValuesCir[0].cost = {
             ...state.circle.newValuesCir[0].cost,
@@ -468,11 +386,7 @@ const reduser = (state = initialState, action) => {
           stateCopy.washer.newArray.Q = Number(
             state.washer.newValuesWas[0].newValueInp3
           );
-          // stateCopy.washer.newArray.S = { ...state.washer.newArray.S };
-          // stateCopy.washer.newArray.S = Swas(
-          //   stateCopy.washer.newArray.param.D,
-          //   stateCopy.washer.newArray.param.d
-          // );
+
           stateCopy.washer.newArray.m = { ...state.washer.newArray.m };
           stateCopy.washer.newArray.m = Number(
             (
@@ -494,19 +408,6 @@ const reduser = (state = initialState, action) => {
           stateCopy.washer.newArray.summ_m = {
             ...state.washer.newArray.summ_m,
           };
-          // stateCopy.washer.newArray.summ_m = Number(
-          //   (stateCopy.washer.newArray.m * stateCopy.washer.newArray.Q).toFixed(
-          //     2
-          //   )
-          // );
-          // stateCopy.washer.newArray.summ_S = {
-          //   ...state.washer.newArray.summ_S,
-          // };
-          // stateCopy.washer.newArray.summ_S = Number(
-          //   (stateCopy.washer.newArray.S * stateCopy.washer.newArray.Q).toFixed(
-          //     2
-          //   )
-          // );
           let res = _cutcost(
             stateCopy.washer.newArray.steel,
             stateCopy.washer.newArray.s
@@ -521,10 +422,6 @@ const reduser = (state = initialState, action) => {
               stateCopy.washer.newArray.P * 0.001 * res) *
             1.2
           ).toFixed(2);
-          // stateCopy.washer.newArray.summ = { ...state.washer.newArray.summ };
-          // stateCopy.washer.newArray.summ = (
-          //   stateCopy.washer.newArray.cost * stateCopy.washer.newArray.Q
-          // ).toFixed(2);
           stateCopy.washer.newValuesWas[0].cost = {
             ...state.washer.newValuesWas[0].cost,
           };
@@ -590,12 +487,7 @@ const reduser = (state = initialState, action) => {
           stateCopy.sector.newArray.Q = Number(
             state.sector.newValuesSec[0].newValueInp4
           );
-          // stateCopy.sector.newArray.S = { ...state.sector.newArray.S };
-          // stateCopy.sector.newArray.S = Ssec(
-          //   stateCopy.sector.newArray.param.d,
-          //   stateCopy.sector.newArray.param.h,
-          //   stateCopy.sector.newArray.param.alpha
-          // );
+
           stateCopy.sector.newArray.m = { ...state.sector.newArray.m };
           stateCopy.sector.newArray.m = Number(
             (
@@ -614,22 +506,7 @@ const reduser = (state = initialState, action) => {
             stateCopy.sector.newArray.param.h,
             stateCopy.sector.newArray.param.alpha
           );
-          // stateCopy.sector.newArray.summ_m = {
-          //   ...state.sector.newArray.summ_m,
-          // };
-          // stateCopy.sector.newArray.summ_m = Number(
-          //   (stateCopy.sector.newArray.m * stateCopy.sector.newArray.Q).toFixed(
-          //     2
-          //   )
-          // );
-          // stateCopy.sector.newArray.summ_S = {
-          //   ...state.sector.newArray.summ_S,
-          // };
-          // stateCopy.sector.newArray.summ_S = Number(
-          //   (stateCopy.sector.newArray.S * stateCopy.sector.newArray.Q).toFixed(
-          //     2
-          //   )
-          // );
+
           let res = _cutcost(
             stateCopy.sector.newArray.steel,
             stateCopy.sector.newArray.s
@@ -874,6 +751,8 @@ const reduser = (state = initialState, action) => {
                   stateCopy.sector.thickness.push(d);
                 }
               }
+              break;
+              default:
           }
         };
         let add = (text, num, form) => {
@@ -1448,6 +1327,8 @@ const reduser = (state = initialState, action) => {
             case "sec":
               addNewTextSec(text, num, form);
               break;
+            default:
+
           }
         };
         let f1 = (text, num, form) => {
@@ -1457,7 +1338,7 @@ const reduser = (state = initialState, action) => {
           for (let i = 0; i < T.length; i++) {
             Te = Te + T[i];
           }
-          if (text == Te) {
+          if (text === Te) {
             add(text, num, form);
           }
         };
@@ -1468,7 +1349,7 @@ const reduser = (state = initialState, action) => {
             for (let i = 0; i < t.length; i++) {
               te = te + t[i];
             }
-            if (text == te) {
+            if (text === te) {
               add(text, num, form);
             }
           }
@@ -1476,13 +1357,13 @@ const reduser = (state = initialState, action) => {
         let f3 = (text, num, form) => {
           add(text, num, form);
         };
-        if (text.length == 1) {
+        if (text.length === 1) {
           f2(text, num, form);
-        } else if (text.length == 0) {
+        } else if (text.length === 0) {
           f3("", num, form);
-        } else if (num == "sel2") {
+        } else if (num === "sel2") {
           add(text, num, form);
-        } else if (num == "sel1") {
+        } else if (num === "sel1") {
           add(text, num, form);
         } else if (text.length > 1) {
           f1(text, num, form);
@@ -1699,7 +1580,6 @@ const reduser = (state = initialState, action) => {
       stateCopy.data.steels = result;
 
       return stateCopy;
-      break;
     case PUSH_DATA:
       stateCopy.authorization = {
         ...state.authorization,
@@ -1750,7 +1630,6 @@ const reduser = (state = initialState, action) => {
         email: action.values.email,
       };
       return stateCopy;
-      break;
     case SET_LOGOUT_DATA:
       const logout = new Promise((resolve, reject) => {
         setAuthorizationToken();
@@ -2034,7 +1913,6 @@ export const setUserDataThunkCreator = (data) => {
 };
 
 export const setLoginDataThunkCreator = (values) => {
-  debugger;
   console.log("попался");
   return (dispatch) => {
     login(values)
