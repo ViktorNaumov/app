@@ -43,7 +43,7 @@
 	text-align: center;	
 	transition-property: all;
 	border:transparent 1px solid;
-	box-shadow: 10px -5px 5px 5px rgba(0, 0, 0, .2);
+	/* box-shadow: 10px -5px 5px 5px rgba(0, 0, 0, .2); */
 }
 .basket{
 	height: 50px;
@@ -55,7 +55,7 @@
 	text-align: center;	
 	transition-property: all;
 	border:transparent 1px solid;
-	box-shadow: 10px -5px 5px 5px rgba(0, 0, 0, .2);
+	/* box-shadow: 10px -5px 5px 5px rgba(0, 0, 0, .2); */
 }
 
 div.basket_content p.bas_c{
@@ -192,5 +192,30 @@ div.basket_content p.bas_c{
 	border:rgb(43,43,43) 1px solid;
 }
 
-
+@media screen and (min-width: 1024px){
+	.menu, .icon1, .icon2, .icon3, .icon4, .icon5, .basket_content {
+		height: 50px;
+		width: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 20px;
+		border-radius: 25px;
+		text-align: center;	
+		transition-property: all;
+		border:transparent 1px solid;
+		box-shadow: 10px -5px 5px 5px rgba(0, 0, 0, .2);
+	}
+	.basket{
+		height: 50px;
+		width: 50px;
+		margin-top: 10px;
+		margin-left: 20px;
+		margin-bottom: 10px;
+		border-radius: 25px;
+		text-align: center;	
+		transition-property: all;
+		border:transparent 1px solid;
+		box-shadow: 10px -5px 5px 5px rgba(0, 0, 0, .2);
+	}
+}
 

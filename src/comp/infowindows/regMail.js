@@ -14,7 +14,7 @@ const RegMail = (props) => {
           <div className="onDark">
             <div className="out" onClick={f}>
               <div>
-                <img src={out} width="20" height="20"></img>
+                <img src={out} width="20" height="20" alt=""></img>
               </div>
             </div>
             <div className="message">

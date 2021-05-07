@@ -1,5 +1,5 @@
 import React from "react"
-import Styles from "../content.css"
+import "../content.css"
 import Picture1 from "../../../IMG/прямоугольник.png"
 import Picture2 from "../../../IMG/Треугольник.png"
 import Picture3 from "../../../IMG/Диск.png"
@@ -9,7 +9,7 @@ import Picture5 from "../../../IMG/Сектор.png"
 const PictureRec=(props)=> {
 	return(
 			<div className="picture">
-				<img src={Picture1}/>
+				<img src={Picture1} alt=""/>
 			</div>
 						
 		);
@@ -18,7 +18,7 @@ const PictureRec=(props)=> {
 const PictureTri=(props)=> {
 	return(
 			<div className="picture">
-				<img src={Picture2}/>
+				<img src={Picture2} alt=""/>
 			</div>
 						
 		);
@@ -27,7 +27,7 @@ const PictureTri=(props)=> {
 const PictureCir=(props)=> {
 	return(
 			<div className="picture">
-				<img src={Picture3}/>
+				<img src={Picture3} alt=""/>
 			</div>
 						
 		);
@@ -36,7 +36,7 @@ const PictureCir=(props)=> {
 const PictureWas=(props)=> {
 	return(
 			<div className="picture">
-				<img src={Picture4}/>
+				<img src={Picture4} alt=""/>
 			</div>
 						
 		);
@@ -45,7 +45,7 @@ const PictureWas=(props)=> {
 const PictureSec=(props)=> {
 	return(
 			<div className="picture">
-				<img src={Picture5}/>
+				<img src={Picture5} alt=""/>
 			</div>
 						
 		);

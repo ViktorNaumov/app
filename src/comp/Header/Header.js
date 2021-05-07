@@ -8,7 +8,7 @@ import Sector from "../../Icons/sector.js";
 import Basket from "../../Icons/basket.js";
 import Auth from "../../Icons/auth.js";
 import Login from "../../Icons/login.js";
-import Basket_content from "../../Icons/basket_content.js";
+import BASKET_CONTENT from "../../Icons/basket_content.js";
 
 const Header = (props) => {
  
@@ -22,7 +22,7 @@ const Header = (props) => {
       <Sector />
       <Login login={props.login} />
       <Auth isAuth={props.isAuth} userLogout={props.userLogout} loginFormShow={props.loginFormShow} />
-      <Basket_content length={props.length} />
+      <BASKET_CONTENT length={props.length} />
       <Basket />
     </div>
   );

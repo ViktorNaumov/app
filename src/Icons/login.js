@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../comp/Header/Header.css";
+import "../comp/Header/Header.css"
 
 const Login = (props) => {
   return (

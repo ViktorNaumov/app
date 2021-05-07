@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../content.css";
+import "../content.css";
 
 const Select = (props) => {
   let inputtext = React.createRef();

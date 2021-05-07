@@ -19,7 +19,7 @@ const LoginForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit}>
       <div className="out" onClick={f1}>
-        <div><img src={out} width="20" height="20"  ></img></div>
+        <div><img src={out} width="20" height="20" alt=""  ></img></div>
       </div>
       <div>
         <div>
@@ -28,7 +28,6 @@ const LoginForm = (props) => {
             component={inputComp}
             name={"email"}
             type={"email"}
-            placeholder="e-mail"
             required
           />
         </div>
@@ -47,7 +46,7 @@ const LoginForm = (props) => {
         <button className="formBut">ВОЙТИ</button>
       </div>
       <div className="reg" >
-        <a className="reg" href="#" onClick={f}>
+        <a className="reg" href="/#"  onClick={f}>
           Зарегистрироваться
         </a>
       </div>

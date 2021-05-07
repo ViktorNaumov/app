@@ -1550,7 +1550,6 @@ const reduser = (state = initialState, action) => {
       break;
     case API_STATE:
 
-      console.log(action.apiState);
       let BD = [];
       for (let i = 0; i < action.apiState.length; i++) {
         let arrBD = [
@@ -1564,7 +1563,6 @@ const reduser = (state = initialState, action) => {
         ];
         BD.push(arrBD);
       }
-      console.log(BD)
       stateCopy.data.costBD = BD
       if (action.arr) {
         stateCopy = { ...stateCopy, SpecArray: action.arr };
@@ -1605,7 +1603,6 @@ const reduser = (state = initialState, action) => {
       }
       break;
     case SET_USER_DATA:
-      console.log("запрос me");
       stateCopy.authorization = {
         ...state.authorization,
         user_id: action.user_id,

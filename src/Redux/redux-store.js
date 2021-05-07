@@ -16,6 +16,6 @@ setAuthorizationToken(localStorage.token)
 
 // let arr = JSON.parse(localStorage.getItem('array'))
 // setArrBasket(arr,store.dispatch)
-window.store=store;
+// window.store=store;
 
 export default store;

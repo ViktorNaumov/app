@@ -7,7 +7,7 @@ const TableEdit =(props)=>{
     }
     return(
         <div className="edit" onClick={f}>
-            <img src={out} ></img>
+            <img src={out} alt="" ></img>
           </div>
     )
 }

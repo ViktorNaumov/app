@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../content.css";
+import "../content.css";
 import Button from "./button";
 import TableEdit from "./tableEdit";
 
@@ -25,9 +25,9 @@ const Specification = (props) => {
       <td>{sp.name}</td>
       <td> {sp.Q} </td>
       <td> {sp.m} </td>
-      {sp.id == "№п." ? (<td> {sp.summ_m} </td>) : (<td> {(sp.m*sp.Q).toFixed(2)} </td>)}
+      {sp.id === "№п." ? (<td> {sp.summ_m} </td>) : (<td> {(sp.m*sp.Q).toFixed(2)} </td>)}
       <td> {sp.cost} </td>
-      {sp.id == "№п." ?  (<td> {sp.summ} </td>) : (<td> {(sp.cost*sp.Q).toFixed(2)} </td>)  }
+      {sp.id === "№п." ?  (<td> {sp.summ} </td>) : (<td> {(sp.cost*sp.Q).toFixed(2)} </td>)  }
       {sp.id !== "№п." ? (
         <td>
           <TableEdit tableEdit = {props.tableEdit} id = {sp.id} />

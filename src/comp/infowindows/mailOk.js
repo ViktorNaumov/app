@@ -16,7 +16,7 @@ const MailOk = (props) => {
             <NavLink to="/">
               <div className="out" onClick={f}>
                 <div>
-                  <img src={out} width="20" height="20"></img>
+                  <img src={out} width="20" height="20" alt=""></img>
                 </div>
               </div>
             </NavLink>
@@ -33,11 +33,11 @@ const MailOk = (props) => {
     </div>
   );
 };
-const mapStateToProps = (state) => {
-  return {
-    regOkShow: state.app.authorization.regOkShow,
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     regOkShow: state.app.authorization.regOkShow,
+//   };
+// };
 
 const mapDispatchToprops = (dispatch) => {
   return {
