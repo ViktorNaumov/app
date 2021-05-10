@@ -1136,7 +1136,6 @@ const reduser = (state = initialState, action) => {
             }
           };
           let addNewTextSec = (text, num, form) => {
-            debugger;
             switch (num) {
               case "sel1":
                 stateCopy.sector.newValuesSec = [...state.sector.newValuesSec];
@@ -1872,15 +1871,13 @@ export const pushDataThunkCreator = (SpecArray) => {
   return (dispatch) => {
     if (SpecArray.length > 1) {
       if (SpecArray[0].email) {
-        console.log(SpecArray[0].email);
         postSpec(SpecArray)
           .then(function (response) {
-            console.log(response.data);
             if (response.data.resultCode === 0) {
               dispatch(pushDataCreator());
               localStorage.removeItem("array");
             } else {
-              console.log("проверка");
+              dispatch(setLogoutDataCreator())
             }
           })
           .catch(function (error) {
@@ -1910,7 +1907,6 @@ export const setUserDataThunkCreator = (data) => {
 };
 
 export const setLoginDataThunkCreator = (values) => {
-  console.log("попался");
   return (dispatch) => {
     login(values)
       .then((response) => {
