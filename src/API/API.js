@@ -18,6 +18,7 @@ export const login = (loginValues) => {
 };
 
 export const registration = (registrationValues) => {
+  console.log('API регистрация')
   return axios.post("http://localhost:3012/api/auth/reg", {
     registrationValues,
   });

@@ -1,0 +1,1 @@
+export const maxLengthCreator = (maxlength) => (value)=>(value && value.length > maxlength ?`ьаксимум ${maxlength} символов`:undefined);

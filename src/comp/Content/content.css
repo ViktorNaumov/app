@@ -329,6 +329,10 @@ input.inForm {
   font-size: 20px;
   margin: 10px;
 }
+.registration form div{
+  text-align: center;
+  color: darkred;
+}
 
 a.reg {
   margin: 0 auto;
@@ -342,6 +346,7 @@ div.reg {
 div.out {
   margin: 10px;
   float: right;
+  cursor: pointer;
 }
 
 div.message {
@@ -403,6 +408,7 @@ div.message {
   margin-top: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .specFlex {
@@ -478,6 +484,39 @@ div.onDark {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1%;
+  margin-bottom: auto;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #e49b0f;
+}
+
+.onDark_OkShow{
+  width: 80%;
+  max-width: 400px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: auto;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #e49b0f;
+
+}
+.onDark_OkShow div{
+  text-align:center;
+}
+.butOkShow{
+  margin-left: 45%;
+  margin-right: auto;
+}
+.onDark_regMail{
+  width: 80%;
+  max-width: 500px;
+  /* height: 440px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
   margin-bottom: auto;
   background-color: white;
   border-radius: 5px;

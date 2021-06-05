@@ -9,12 +9,12 @@ const PushOk = (props) => {
   return (
     <div>
       {(props.pushOkShow)?<div className="Dark">
-        <div className="onDark">
+        <div  className="onDark_OkShow">
           <div>
             <h3>На Вашу почту направлен счёт </h3>
             
           </div>
-          <button onClick={f}>OK</button>
+          <button className="butOkShow" onClick={f}>OK</button>
         </div>
       </div>:null}
     </div>

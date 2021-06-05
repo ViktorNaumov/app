@@ -11,7 +11,7 @@ const RegMail = (props) => {
     <div>
       {props.regMail ? (
         <div className="Dark">
-          <div className="onDark">
+          <div className="onDark_regMail">
             <div className="out" onClick={f}>
               <div>
                 <img src={out} width="20" height="20" alt=""></img>

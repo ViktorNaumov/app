@@ -1,0 +1,1 @@
+export const string_validator = (value)=>( value && !/^[а-я]+$/i.test(value) === true ? `только русские буквы без пробелов`: undefined); 
